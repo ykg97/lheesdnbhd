@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+
+# Standard Search Engines
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+# Generative AI, LLM Crawlers, and AI Search Engines
+# Explicitly allow these bots so that AI platforms can index the company
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: OmgiliBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: cohere-ai
+Allow: /
+
+Sitemap: https://lhee-engineering.site/sitemap.xml

@@ -55,7 +55,7 @@ const certs = [
     { label: "CIDB G7", detail: "Grade G7 Registration" },
     { label: "Class A", detail: "Energy Commission" },
     { label: "33kV", detail: "Licensed Capacity" },
-    { label: "RM 10M+", detail: "Per Project Capacity" }
+    { label: "21+ years", detail: "Average Client Retention Rate" }
 ];
 
 export default function Home() {

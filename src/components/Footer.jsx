@@ -19,7 +19,7 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div>
+                    <div className="footer-nav-col">
                         <h4 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: '#FFFFFF', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.9rem' }}>Navigation</h4>
                         <ul className="footer-link-list">
                             <li><Link to="/">Home</Link></li>
@@ -29,7 +29,7 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div>
+                    <div className="footer-services-col">
                         <h4 style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: '#FFFFFF', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.9rem' }}>Services</h4>
                         <ul className="footer-link-list">
                             <li><Link to="/company-structure" style={{ color: '#D1D5DB' }}>Design & Build</Link></li>

@@ -63,6 +63,7 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
 }
 
 .text-navy {
@@ -127,6 +128,7 @@ p {
 .section {
   padding: 6rem 0;
   position: relative;
+  overflow-x: hidden;
 }
 
 /* Solid Cards */
@@ -243,7 +245,7 @@ p {
 /* Services Grid */
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 2rem;
 }
 
@@ -510,46 +512,355 @@ p {
   background: rgba(244, 246, 248, 0.5);
 }
 
-/* Responsive */
+/* ═══════════════════════════════════════════
+   RESPONSIVE — Tablet
+   ═══════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .container {
+    padding: 0 1.5rem;
+  }
 }
 
+/* ═══════════════════════════════════════════
+   RESPONSIVE — Tablet-Small / Large Phone
+   ═══════════════════════════════════════════ */
 @media (max-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-title {
-    font-size: 2.8rem !important;
-  }
-
   body {
     font-size: 16px;
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr;
+  .container {
+    padding: 0 1.25rem;
   }
 
+  /* ── Sections ── */
   .section {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
   }
 
-  .metrics-strip {
-    grid-template-columns: 1fr 1fr;
+  /* ── Hero ── */
+  .hero {
+    min-height: 85vh;
+    padding-top: 100px;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.6rem !important;
+    line-height: 1.15 !important;
   }
 
   .hero-stats {
     grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 3rem !important;
+    padding-top: 2rem !important;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+
+  /* ── About ── */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    padding: 3.5rem 0 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-nav-col,
+  .footer-services-col {
+    display: none;
+  }
+
+  /* ── Metrics ── */
+  .metrics-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .metric-value {
+    font-size: 2rem;
+  }
+
+  .metric-label {
+    font-size: 0.85rem;
+  }
+
+  .metric-card {
+    padding: 1.5rem 1rem;
+  }
+
+  /* ── Certs ── */
+  .cert-bar {
     gap: 1.5rem;
+  }
+
+  /* ── Tables ── */
+  .data-table {
+    font-size: 0.85rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.75rem 1rem;
+  }
+
+  /* ── Page Hero (inner pages) ── */
+  .page-hero-banner {
+    height: 280px;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* ── Portfolio Filter Tabs ── */
+  .portfolio-tabs {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .portfolio-tab {
+    padding: 0.6rem 1.1rem;
+    font-size: 0.85rem;
+  }
+
+  /* ── Page Hero Titles (inner pages) ── */
+  .page-hero-title {
+    font-size: 2.8rem !important;
+  }
+
+  /* ── About Features ── */
+  .about-features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* ── CTA Card ── */
+  .cta-card {
+    padding: 3rem 2rem !important;
+  }
+
+  /* ── Company page overview cards ── */
+  .solid-card {
+    padding: 2rem !important;
+  }
+
+  .solid-card>div:first-child {
+    padding: 0.7rem !important;
+  }
+
+  /* ── Featured Project ── */
+  .featured-project-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .featured-summary-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .featured-highlights-bar {
+    grid-template-columns: repeat(3, 1fr) !important;
+    padding: 1.5rem 1.25rem !important;
+    gap: 1rem !important;
+  }
+
+  .featured-highlights-bar>div>div:first-child {
+    font-size: 1.6rem !important;
+  }
+
+  .featured-highlights-bar>div>div:last-child {
+    font-size: 0.8rem !important;
   }
 }
 
+/* ═══════════════════════════════════════════
+   RESPONSIVE — Small Phones (≤ 600px)
+   ═══════════════════════════════════════════ */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.2rem !important;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.9rem;
+  }
+
+  .stat-item {
+    padding-left: 1rem;
+  }
+
+  /* ── Service cards ── */
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    padding: 2rem;
+  }
+
+  /* ── Section headings  ── */
+  h2 {
+    font-size: 1.9rem !important;
+  }
+
+  /* ── Page Hero Titles ── */
+  .page-hero-title {
+    font-size: 2.2rem !important;
+  }
+
+  /* ── CTA Card ── */
+  .cta-card {
+    padding: 2.5rem 1.5rem !important;
+  }
+
+  /* ── Industries grid stack vertical ── */
+  .metrics-strip {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Business Hours Bar ── */
+  .business-hours-bar {
+    padding: 2rem 1.5rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left;
+  }
+
+  .business-hours-bar .btn-primary {
+    width: 100%;
+  }
+
+  /* ── Contact grid padding ── */
+  .contact-grid>div:first-child {
+    padding: 2.5rem 1.5rem !important;
+  }
+
+  /* ── Indonesia office card ── */
+  .contact-grid+div {
+    padding: 2rem 1.5rem !important;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — Extra-Small Phones (≤ 480px)
+   ═══════════════════════════════════════════ */
 @media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  /* ── Stats ── */
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .stat-number {
+    font-size: 1.7rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  /* ── Metrics ── */
   .metrics-strip {
     grid-template-columns: 1fr;
+  }
+
+  .metric-value {
+    font-size: 1.8rem;
+  }
+
+  /* ── Section headings ── */
+  h2 {
+    font-size: 1.7rem !important;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.25rem;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  /* ── Certs ── */
+  .cert-bar {
+    gap: 1rem;
+  }
+
+  .cert-item {
+    gap: 0.35rem;
+  }
+
+  /* ── Portfolio ── */
+  .portfolio-tabs {
+    gap: 0.4rem;
+  }
+
+  .portfolio-tab {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  /* ── Page Hero Titles ── */
+  .page-hero-title {
+    font-size: 1.9rem !important;
+  }
+
+  /* ── CTA Card ── */
+  .cta-card {
+    padding: 2rem 1.25rem !important;
+  }
+
+  /* ── Capability & leadership cards ── */
+  .capability-grid {
+    padding: 2rem !important;
   }
 }

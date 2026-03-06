@@ -16,7 +16,7 @@ export default function Contact() {
             <div className="hero-overlay" style={{ height: '350px', position: 'absolute', top: 0, left: 0, width: '100%', zIndex: 0 }}></div>
             <div className="container" style={{ position: 'relative', zIndex: 10, paddingTop: '6rem', paddingBottom: '4rem', textAlign: 'center' }}>
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-                    <h1 style={{ fontSize: '3.8rem', color: '#FFFFFF', marginBottom: '1rem' }}>
+                    <h1 className="page-hero-title" style={{ fontSize: '3.8rem', color: '#FFFFFF', marginBottom: '1rem' }}>
                         Contact <span className="text-yellow">Us.</span>
                     </h1>
                     <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.15rem', maxWidth: '700px', margin: '0 auto', lineHeight: 1.7, fontWeight: 400 }}>
@@ -160,6 +160,7 @@ export default function Contact() {
                 {/* ─── BUSINESS HOURS ─── */}
                 <motion.div
                     {...fadeUpParams}
+                    className="business-hours-bar"
                     style={{
                         marginTop: '2.5rem',
                         background: 'var(--primary-navy)',
@@ -169,7 +170,7 @@ export default function Contact() {
                         justifyContent: 'space-between',
                         alignItems: 'center',
                         flexWrap: 'wrap',
-                        gap: '2rem',
+                        gap: '1.5rem',
                         color: 'var(--text-light)',
                     }}
                 >

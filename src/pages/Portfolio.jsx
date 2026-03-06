@@ -1,12 +1,37 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Calendar, Zap, Building, Droplets, GraduationCap, Factory, Ship } from 'lucide-react';
+import { MapPin, Calendar, Zap, Building, Droplets, GraduationCap, Factory, Ship, CheckCircle, Wrench, Award } from 'lucide-react';
 
 const fadeUpParams = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, margin: "-50px" },
     transition: { duration: 0.5, ease: "easeOut" }
+};
+
+/* ─── FEATURED PROJECT ─── */
+const featuredProject = {
+    title: "Nestle Batu Tiga Cardamom Project",
+    client: "Nestle Manufacturing Sdn Bhd",
+    year: "2023",
+    scope: "Main Switchboard (MSB) installation, MCC panel installation, Cable tray system, Power distribution & earthing system",
+    description: "This project involved the installation and organization of electrical services within an industrial processing facility. The scope of work included structured cable management, stainless steel tray installation, and integration with process equipment systems.",
+    scopeOfWorks: [
+        "Installation of heavy-duty cable trays and vertical cable ladder systems",
+        "Proper segregation and routing of power, control, and earthing cables",
+        "Main Switchboard (MSB) installation",
+        "MCC panel installation",
+        "Power distribution power and control systems",
+        "Compliance with industrial safety and quality standards",
+    ],
+    summary: "All cable management systems were installed with proper alignment, secure fastening, and clear labeling to ensure ease of maintenance and long-term reliability. Stainless steel tray and ladder works were completed with precision to meet hygienic and durability requirements suitable for industrial applications.",
+    emphasis: "The project was executed with a strong emphasis on workmanship quality, safety compliance, and efficient space utilization within the plant environment.",
+    images: [
+        { src: "/images/nestle_site_crane.png", caption: "Construction site overview" },
+        { src: "/images/nestle_cable_tray.png", caption: "Cable tray installation" },
+        { src: "/images/nestle_mcc_panel.png", caption: "MCC panel & switchboard" },
+        { src: "/images/nestle_welding.png", caption: "On-site welding works" },
+    ],
 };
 
 const categories = [
@@ -220,6 +245,7 @@ const countries = [
 
 export default function Portfolio() {
     const [activeCategory, setActiveCategory] = useState('all');
+    const [featuredImageIdx, setFeaturedImageIdx] = useState(0);
 
     const filteredProjects = activeCategory === 'all'
         ? projects
@@ -230,7 +256,7 @@ export default function Portfolio() {
             <div className="hero-overlay" style={{ height: '350px', position: 'absolute', top: 0, left: 0, width: '100%', zIndex: 0 }}></div>
             <div className="container" style={{ position: 'relative', zIndex: 10, paddingTop: '6rem', paddingBottom: '4rem', textAlign: 'center' }}>
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-                    <h1 style={{ fontSize: '3.8rem', color: '#FFFFFF', marginBottom: '1rem' }}>
+                    <h1 className="page-hero-title" style={{ fontSize: '3.8rem', color: '#FFFFFF', marginBottom: '1rem' }}>
                         Project <span className="text-yellow">Portfolio.</span>
                     </h1>
                     <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.15rem', maxWidth: '700px', margin: '0 auto', lineHeight: 1.7, fontWeight: 400 }}>
@@ -239,9 +265,180 @@ export default function Portfolio() {
                 </motion.div>
             </div>
 
+            {/* ═══════════════════════════════════════════
+                FEATURED PROJECT SECTION
+               ═══════════════════════════════════════════ */}
+            <section className="section" style={{ backgroundColor: '#FFFFFF', borderTop: '4px solid var(--accent-yellow)', position: 'relative', zIndex: 10 }}>
+                <div className="container">
+                    {/* Section Header */}
+                    <motion.div {...fadeUpParams} style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+                        <span style={{
+                            display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+                            background: 'var(--accent-yellow)', color: 'var(--primary-navy)',
+                            padding: '0.5rem 1.25rem', borderRadius: '50px',
+                            fontWeight: 700, fontSize: '0.85rem', textTransform: 'uppercase',
+                            letterSpacing: '1px', marginBottom: '1.25rem'
+                        }}>
+                            <Award size={16} /> Featured Project
+                        </span>
+                        <h2 style={{ fontSize: '2.6rem', color: 'var(--primary-navy)', marginBottom: '0.5rem' }}>
+                            {featuredProject.title.split('Cardamom')[0]}<span className="text-yellow">Cardamom Project</span>
+                        </h2>
+                        <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', maxWidth: '600px', margin: '0 auto' }}>
+                            Electrical Installation Works — Completed {featuredProject.year}
+                        </p>
+                    </motion.div>
+
+                    {/* Main Content Grid */}
+                    <motion.div {...fadeUpParams} className="featured-project-grid" style={{
+                        display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start'
+                    }}>
+                        {/* Left: Image Gallery */}
+                        <div>
+                            {/* Main Image */}
+                            <div style={{
+                                borderRadius: 'var(--radius-md)', overflow: 'hidden',
+                                boxShadow: 'var(--shadow-lg)', marginBottom: '1rem',
+                                aspectRatio: '4/3', position: 'relative'
+                            }}>
+                                <AnimatePresence mode="wait">
+                                    <motion.img
+                                        key={featuredImageIdx}
+                                        src={featuredProject.images[featuredImageIdx].src}
+                                        alt={featuredProject.images[featuredImageIdx].caption}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                                    />
+                                </AnimatePresence>
+                                {/* Caption overlay */}
+                                <div style={{
+                                    position: 'absolute', bottom: 0, left: 0, right: 0,
+                                    background: 'linear-gradient(transparent, rgba(0,0,0,0.7))',
+                                    padding: '2rem 1.5rem 1rem',
+                                    color: '#FFF', fontSize: '0.9rem', fontWeight: 500
+                                }}>
+                                    {featuredProject.images[featuredImageIdx].caption}
+                                </div>
+                            </div>
+
+                            {/* Thumbnail Strip */}
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.6rem' }}>
+                                {featuredProject.images.map((img, idx) => (
+                                    <button
+                                        key={idx}
+                                        onClick={() => setFeaturedImageIdx(idx)}
+                                        style={{
+                                            padding: 0, border: idx === featuredImageIdx ? '3px solid var(--accent-yellow)' : '3px solid transparent',
+                                            borderRadius: '8px', overflow: 'hidden', cursor: 'pointer',
+                                            aspectRatio: '1', transition: 'border-color 0.2s, opacity 0.2s',
+                                            opacity: idx === featuredImageIdx ? 1 : 0.65,
+                                            background: 'none'
+                                        }}
+                                    >
+                                        <img src={img.src} alt={img.caption} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Right: Project Details (kept concise to align with gallery height) */}
+                        <div>
+                            {/* Meta badges */}
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.75rem' }}>
+                                <span style={{
+                                    display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
+                                    fontSize: '0.85rem', fontWeight: 600, color: 'var(--primary-navy)',
+                                    background: 'rgba(11, 36, 71, 0.06)', padding: '0.45rem 1rem', borderRadius: '50px'
+                                }}>
+                                    <Building size={14} /> {featuredProject.client}
+                                </span>
+                                <span style={{
+                                    display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
+                                    fontSize: '0.85rem', fontWeight: 600, color: 'var(--primary-navy)',
+                                    background: 'rgba(11, 36, 71, 0.06)', padding: '0.45rem 1rem', borderRadius: '50px'
+                                }}>
+                                    <Calendar size={14} /> Completed {featuredProject.year}
+                                </span>
+                            </div>
+
+                            {/* Scope of Work tag */}
+                            <div style={{
+                                background: 'var(--bg-off-white)', borderRadius: 'var(--radius-md)',
+                                padding: '1.25rem 1.5rem', marginBottom: '1.75rem',
+                                borderLeft: '4px solid var(--accent-yellow)'
+                            }}>
+                                <p style={{ margin: 0, fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-muted)', marginBottom: '0.4rem' }}>Scope of Work</p>
+                                <p style={{ margin: 0, fontSize: '0.95rem', color: 'var(--text-dark)', lineHeight: 1.6, fontWeight: 500 }}>{featuredProject.scope}</p>
+                            </div>
+
+                            {/* Description */}
+                            <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: 1.75, marginBottom: '1.5rem' }}>
+                                {featuredProject.description}
+                            </p>
+
+                            {/* Scope of Works List */}
+                            <h4 style={{ fontSize: '1.05rem', color: 'var(--primary-navy)', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                <Wrench size={18} /> Scope of Works
+                            </h4>
+                            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+                                {featuredProject.scopeOfWorks.map((item, i) => (
+                                    <li key={i} style={{
+                                        display: 'flex', gap: '0.75rem', alignItems: 'flex-start',
+                                        fontSize: '0.95rem', color: 'var(--text-dark)', lineHeight: 1.5
+                                    }}>
+                                        <CheckCircle size={16} style={{ color: 'var(--accent-yellow)', flexShrink: 0, marginTop: '3px' }} />
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </motion.div>
+
+                    {/* Full-width summary below the grid */}
+                    <motion.div {...fadeUpParams} style={{
+                        marginTop: '2.5rem', display: 'grid', gridTemplateColumns: '1fr 1fr',
+                        gap: '2rem', alignItems: 'start'
+                    }} className="featured-summary-grid">
+                        <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: 1.75, margin: 0 }}>
+                            {featuredProject.summary}
+                        </p>
+                        <p style={{
+                            color: 'var(--primary-navy)', fontSize: '0.95rem', lineHeight: 1.7,
+                            fontWeight: 600, fontStyle: 'italic', margin: 0,
+                            paddingLeft: '1.25rem', borderLeft: '3px solid var(--accent-yellow)'
+                        }}>
+                            {featuredProject.emphasis}
+                        </p>
+                    </motion.div>
+
+                    {/* Key Highlights Bar */}
+                    <motion.div {...fadeUpParams} className="featured-highlights-bar" style={{
+                        display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem',
+                        marginTop: '3rem', background: 'var(--primary-navy)', borderRadius: 'var(--radius-md)',
+                        padding: '2rem 2.5rem', color: '#FFF', textAlign: 'center'
+                    }}>
+                        <div>
+                            <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent-yellow)', marginBottom: '0.3rem' }}>40+ yrs</div>
+                            <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.75)', fontWeight: 500 }}>Nestlé Partnership</div>
+                        </div>
+                        <div>
+                            <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent-yellow)', marginBottom: '0.3rem' }}>2023</div>
+                            <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.75)', fontWeight: 500 }}>Project Completed</div>
+                        </div>
+                        <div>
+                            <div style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--accent-yellow)', marginBottom: '0.3rem' }}>100%</div>
+                            <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.75)', fontWeight: 500 }}>Safety Compliance</div>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+
             <div className="container" style={{ position: 'relative', zIndex: 10 }}>
                 {/* ─── CATEGORY TABS ─── */}
-                <div className="portfolio-tabs">
+                <div className="portfolio-tabs" style={{ marginTop: '3rem' }}>
                     {categories.map(cat => (
                         <button
                             key={cat.id}

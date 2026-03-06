@@ -51,7 +51,7 @@ export default function CompanyStructure() {
             <div className="hero-overlay" style={{ height: '350px', position: 'absolute', top: 0, left: 0, width: '100%', zIndex: 0 }}></div>
             <div className="container" style={{ position: 'relative', zIndex: 10, paddingTop: '6rem', paddingBottom: '4rem', textAlign: 'center' }}>
                 <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-                    <h1 style={{ fontSize: '3.8rem', color: '#FFFFFF', marginBottom: '1rem' }}>
+                    <h1 className="page-hero-title" style={{ fontSize: '3.8rem', color: '#FFFFFF', marginBottom: '1rem' }}>
                         Company <span className="text-yellow">Profile.</span>
                     </h1>
                     <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1.15rem', maxWidth: '700px', margin: '0 auto', lineHeight: 1.7, fontWeight: 400 }}>
@@ -81,7 +81,7 @@ export default function CompanyStructure() {
                 </motion.div>
 
                 {/* ─── COMPANY OVERVIEW CARDS ─── */}
-                <motion.div {...fadeUpParams} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem', marginBottom: '5rem' }}>
+                <motion.div {...fadeUpParams} className="company-overview-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(400px, 100%), 1fr))', gap: '2rem', marginBottom: '5rem' }}>
                     <div className="solid-card" style={{ padding: '2.5rem', borderTop: '4px solid var(--accent-yellow)', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
                         <div style={{ color: 'var(--primary-navy)', background: 'var(--bg-off-white)', padding: '0.85rem', borderRadius: '8px', flexShrink: 0 }}>
                             <Award size={32} />
@@ -137,7 +137,7 @@ export default function CompanyStructure() {
                     <h2 style={{ fontSize: '2.2rem', marginBottom: '2.5rem', textAlign: 'center' }}>
                         Capability <span className="text-yellow">Highlights</span>
                     </h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+                    <div className="capability-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: '2rem' }}>
                         {[
                             { icon: <Briefcase size={24} />, text: "Contract capacity exceeding RM 10 million per project" },
                             { icon: <GraduationCap size={24} />, text: "In-house Professional Engineer for turnkey design & build" },
@@ -188,7 +188,7 @@ export default function CompanyStructure() {
                     <div className="section-divider" style={{ margin: '1rem auto 0' }}></div>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', marginBottom: '5rem' }}>
+                <div className="leadership-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))', gap: '2rem', marginBottom: '5rem' }}>
                     {directors.map((member, idx) => (
                         <motion.div
                             key={idx}

@@ -192,7 +192,7 @@ export default function Home() {
                                 Our mission is to provide world-class Electrical Engineering Services for all customers with maximum efficiency, minimum time, and cost savings. We have designed and built <strong>200+ palm oil mills</strong> across 10+ countries and maintained 30+ year client relationships — including our 40-year partnership with Nestlé.
                             </p>
 
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                            <div className="about-features-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                                     <div style={{ color: 'var(--primary-navy)', background: 'var(--accent-yellow)', padding: '0.7rem', borderRadius: '50%', flexShrink: 0 }}>
                                         <Globe size={24} />
@@ -264,7 +264,7 @@ export default function Home() {
             {/* ─── CTA ─── */}
             <section id="contact" className="section" style={{ backgroundColor: 'var(--bg-off-white)' }}>
                 <div className="container" style={{ textAlign: 'center' }}>
-                    <motion.div {...fadeUpParams} style={{
+                    <motion.div {...fadeUpParams} className="cta-card" style={{
                         maxWidth: '850px',
                         margin: '0 auto',
                         background: '#FFFFFF',

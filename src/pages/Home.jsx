@@ -55,7 +55,7 @@ const certs = [
     { label: "CIDB G7", detail: "Grade G7 Registration" },
     { label: "Class A", detail: "Energy Commission" },
     { label: "33kV", detail: "Licensed Capacity" },
-    { label: "21+ years", detail: "Average Client Retention Rate" }
+    { label: "Global projects", detail: "Multiple projects delivered worldwide" }
 ];
 
 export default function Home() {
@@ -119,7 +119,7 @@ export default function Home() {
             </section>
 
             {/* ─── CREDENTIALS STRIP ─── */}
-            <section style={{ padding: '3rem 0', backgroundColor: '#FFFFFF', borderBottom: '1px solid var(--border-light)' }}>
+            {/*<section style={{ padding: '3rem 0', backgroundColor: '#FFFFFF', borderBottom: '1px solid var(--border-light)' }}>
                 <div className="container">
                     <div className="cert-bar">
                         {certs.map((c, i) => (
@@ -140,7 +140,7 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section>*/}
 
             {/* ─── SERVICES ─── */}
             <section id="services" className="section" style={{ backgroundColor: '#FFFFFF' }}>
@@ -174,7 +174,7 @@ export default function Home() {
             </section>
 
             {/* ─── ABOUT ─── */}
-            <section id="about-us" className="section" style={{ backgroundColor: 'var(--bg-off-white)' }}>
+            {/*<section id="about-us" className="section" style={{ backgroundColor: 'var(--bg-off-white)' }}>
                 <div className="container">
                     <div className="about-grid">
                         <motion.div {...fadeUpParams}>
@@ -215,7 +215,7 @@ export default function Home() {
                         </motion.div>
                     </div>
                 </div>
-            </section>
+            </section>*/}
 
             {/* ─── INDUSTRIES ─── */}
             <section className="section" style={{ backgroundColor: 'var(--primary-navy)', color: 'var(--text-light)' }}>

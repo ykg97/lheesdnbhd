@@ -49,9 +49,9 @@ const projects = [
         category: 'palm',
         title: "200+ Palm Oil Mills — Design & Build",
         period: "1985 – 2025",
-        location: "Malaysia, Indonesia, PNG, Philippines, Solomon Islands, Ghana, Myanmar, Latin America",
+        location: "Malaysia, Indonesia, Papua New Guinea, Philippines, Solomon Islands, Ghana, Myanmar, Latin America",
         description: "Complete electrical engineering design & build for over 200 palm oil mills (198 projects) across 10+ countries. Mills range from 60 to 180 tonnes capacity, including kernel crushing plants, biogas plants, and extensions.",
-        highlights: ["First international mill: Kwae Palm Oil Mill, Ghana (1987)", "Latin America expansion: Cademas POM (2022), Palmenol POM (2024)", "Largest PNG client: New Britain Palm Oil Limited (NBPOL) — multiple mills, biogas plants, domestic power systems"],
+        highlights: ["First international mill: Kwae Palm Oil Mill, Ghana (1987)", "Latin America expansion: Cademas POM (2022), Palmenol POM (2024)", "Largest Papua New Guinea client: New Britain Palm Oil Limited (NBPOL) — multiple mills, biogas plants, domestic power systems"],
         image: "/images/project_3_factory.png",
         icon: <Building size={24} />
     },
@@ -97,7 +97,7 @@ const projects = [
     },
     {
         category: 'power',
-        title: "NBPOL PNG — Biogas Power Plants",
+        title: "NBPOL Papua New Guinea — Biogas Power Plants",
         period: "2012",
         location: "Papua New Guinea",
         description: "Biogas CDM power plant installations for New Britain Palm Oil Limited (NBPOL) in Papua New Guinea, supporting clean energy generation from palm oil mill effluent.",
@@ -110,7 +110,7 @@ const projects = [
         title: "Steam Turbine & Diesel Generator Upgrading",
         period: "2013",
         location: "Papua New Guinea",
-        description: "Steam turbine and diesel generator upgrading works in PNG, handling systems up to 5000A capacity and 2MW turbines for industrial power generation.",
+        description: "Steam turbine and diesel generator upgrading works in Papua New Guinea, handling systems up to 5000A capacity and 2MW turbines for industrial power generation.",
         highlights: ["Up to 5000A capacity systems", "2MW turbine installations"],
         image: "/images/project_3_factory.png",
         icon: <Zap size={24} />
@@ -479,7 +479,7 @@ export default function Portfolio() {
                                         loading="lazy"
                                     />
                                 </div>
-                                <div style={{ padding: '2.5rem' }}>
+                                <div className="portfolio-card-content">
                                     <div style={{ display: 'flex', gap: '1rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
                                         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', fontWeight: 600, color: 'var(--primary-navy)', background: 'rgba(11, 36, 71, 0.06)', padding: '0.35rem 0.85rem', borderRadius: '50px' }}>
                                             <Calendar size={14} /> {proj.period}
@@ -491,7 +491,7 @@ export default function Portfolio() {
                                     <h3 style={{ fontSize: '1.6rem', color: 'var(--primary-navy)', marginBottom: '0.75rem', lineHeight: 1.25 }}>
                                         {proj.title}
                                     </h3>
-                                    <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: 1.65, marginBottom: '1.25rem' }}>
+                                    <p className="line-clamp-3" style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: 1.65, marginBottom: '1.25rem' }}>
                                         {proj.description}
                                     </p>
                                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>

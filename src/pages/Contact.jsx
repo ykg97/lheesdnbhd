@@ -133,16 +133,12 @@ export default function Contact() {
                 {/* ─── INDONESIA OFFICE ─── */}
                 <motion.div
                     {...fadeUpParams}
+                    className="solid-card flex-col-mobile"
                     style={{
                         marginTop: '2.5rem',
-                        background: '#FFFFFF',
-                        borderRadius: 'var(--radius-md)',
-                        border: '1px solid var(--border-light)',
-                        padding: '2.5rem',
                         display: 'flex',
                         gap: '1.25rem',
                         alignItems: 'flex-start',
-                        boxShadow: 'var(--shadow-sm)'
                     }}
                 >
                     <div style={{ color: 'var(--primary-navy)', background: 'var(--bg-off-white)', padding: '0.85rem', borderRadius: '50%', flexShrink: 0 }}>

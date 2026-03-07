@@ -32,7 +32,7 @@ const directors = [
 
 const keyPersonnel = [
     { name: "Jolene Choy", role: "Director / Office Operations", detail: "Mechanical design executive, 14+ years experience in palm oil mill and process plant design." },
-    { name: "Chew Choon Kui", role: "Project Manager", detail: "Senior Electrical Wireman. 18+ years across PNG, Solomon Islands, Sabah, Sarawak, and Indonesia." },
+    { name: "Chew Choon Kui", role: "Project Manager", detail: "Senior Electrical Wireman. 18+ years across Papua New Guinea, Solomon Islands, Sabah, Sarawak, and Indonesia." },
     { name: "Ang Chew Leong", role: "Site Manager", detail: "Electrical Wireman. 16+ years of international project execution." },
     { name: "Lim Fung Yu", role: "Site Manager", detail: "16+ years. Key executor for Nestlé manufacturing plants." },
     { name: "Choy Cheong Wee (Kenny)", role: "Safety & Project Coordinator", detail: "Project coordination and safety oversight across all active sites." },
@@ -82,7 +82,7 @@ export default function CompanyStructure() {
 
                 {/* ─── COMPANY OVERVIEW CARDS ─── */}
                 <motion.div {...fadeUpParams} className="company-overview-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(400px, 100%), 1fr))', gap: '2rem', marginBottom: '5rem' }}>
-                    <div className="solid-card" style={{ padding: '2.5rem', borderTop: '4px solid var(--accent-yellow)', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+                    <div className="solid-card flex-col-mobile" style={{ borderTop: '4px solid var(--accent-yellow)', gap: '1.5rem', alignItems: 'flex-start' }}>
                         <div style={{ color: 'var(--primary-navy)', background: 'var(--bg-off-white)', padding: '0.85rem', borderRadius: '8px', flexShrink: 0 }}>
                             <Award size={32} />
                         </div>
@@ -94,7 +94,7 @@ export default function CompanyStructure() {
                         </div>
                     </div>
 
-                    <div className="solid-card" style={{ padding: '2.5rem', borderTop: '4px solid var(--accent-yellow)', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+                    <div className="solid-card flex-col-mobile" style={{ borderTop: '4px solid var(--accent-yellow)', gap: '1.5rem', alignItems: 'flex-start' }}>
                         <div style={{ color: 'var(--primary-navy)', background: 'var(--bg-off-white)', padding: '0.85rem', borderRadius: '8px', flexShrink: 0 }}>
                             <Target size={32} />
                         </div>
@@ -107,26 +107,26 @@ export default function CompanyStructure() {
                         </div>
                     </div>
 
-                    <div className="solid-card" style={{ padding: '2.5rem', borderTop: '4px solid var(--accent-yellow)', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+                    <div className="solid-card flex-col-mobile" style={{ borderTop: '4px solid var(--accent-yellow)', gap: '1.5rem', alignItems: 'flex-start' }}>
                         <div style={{ color: 'var(--primary-navy)', background: 'var(--bg-off-white)', padding: '0.85rem', borderRadius: '8px', flexShrink: 0 }}>
                             <Globe size={32} />
                         </div>
                         <div>
                             <h3 style={{ fontSize: '1.5rem', color: 'var(--primary-navy)', marginBottom: '0.75rem' }}>Global Footprint</h3>
                             <p style={{ color: 'var(--text-muted)', lineHeight: 1.7, fontSize: '1.02rem', margin: 0 }}>
-                                Over <strong>223 major installations</strong> spanning Malaysia, Indonesia, Singapore, PNG, Philippines, Thailand, India, Australia, Solomon Islands, Ghana, Myanmar, Mexico, Latin America, and South Africa.
+                                Over <strong>223 major installations</strong> spanning Malaysia, Indonesia, Singapore, Papua New Guinea, Philippines, Thailand, India, Australia, Solomon Islands, Ghana, Myanmar, Mexico, Latin America, and South Africa.
                             </p>
                         </div>
                     </div>
 
-                    <div className="solid-card" style={{ padding: '2.5rem', borderTop: '4px solid var(--accent-yellow)', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+                    <div className="solid-card flex-col-mobile" style={{ borderTop: '4px solid var(--accent-yellow)', gap: '1.5rem', alignItems: 'flex-start' }}>
                         <div style={{ color: 'var(--primary-navy)', background: 'var(--bg-off-white)', padding: '0.85rem', borderRadius: '8px', flexShrink: 0 }}>
                             <Handshake size={32} />
                         </div>
                         <div>
                             <h3 style={{ fontSize: '1.5rem', color: 'var(--primary-navy)', marginBottom: '0.75rem' }}>Long-Term Partnerships</h3>
                             <p style={{ color: 'var(--text-muted)', lineHeight: 1.7, fontSize: '1.02rem', margin: 0 }}>
-                                An average <strong>21-year</strong> client relationship span. Key partnerships include Nestlé (since 1985), Dutch Lady/Lactalis, Central Sugars Refinery, and NBPOL (PNG).
+                                An average <strong>21-year</strong> client relationship span. Key partnerships include Nestlé (since 1985), Dutch Lady/Lactalis, Central Sugars Refinery, and NBPOL (Papua New Guinea).
                             </p>
                         </div>
                     </div>
@@ -139,7 +139,7 @@ export default function CompanyStructure() {
                     </h2>
                     <div className="capability-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: '2rem' }}>
                         {[
-                            { icon: <Briefcase size={24} />, text: "Contract capacity exceeding RM 10 million per project" },
+                            { icon: <Briefcase size={24} />, text: "Veteran experience in delivery large-scale global projects" },
                             { icon: <GraduationCap size={24} />, text: "In-house Professional Engineer for turnkey design & build" },
                             { icon: <ShieldCheck size={24} />, text: "Strong banking relationships ensuring on-schedule completion" },
                             { icon: <Users size={24} />, text: "Highly qualified engineers, designers, and 15+ skilled technicians" },
@@ -281,11 +281,7 @@ export default function CompanyStructure() {
                 </motion.div>
 
                 {/* ─── LINK COMPANY ─── */}
-                <motion.div {...fadeUpParams} style={{
-                    background: '#FFFFFF',
-                    borderRadius: 'var(--radius-md)',
-                    border: '1px solid var(--border-light)',
-                    padding: '2.5rem',
+                <motion.div {...fadeUpParams} className="solid-card flex-col-mobile" style={{
                     display: 'flex',
                     gap: '1.5rem',
                     alignItems: 'flex-start'

@@ -57,52 +57,52 @@ const projects = [
     },
     {
         category: 'industrial',
-        title: "Nestlé Manufacturing — 40-Year Partnership",
+        title: "Nestlé Manufacturing - 40-Year Partnership",
         period: "1985 – Present",
         location: "Shah Alam, Petaling Jaya, Bintang, Chembong",
         description: "Continuous maintenance contract since 1985. Projects include 33kV/11kV power distribution, solar installations, VMS turnkey systems, WWTP, IT infrastructure, and production line extensions across all Malaysian facilities.",
-        highlights: ["Continuous maintenance contract since 1985 — 40 years running", "33kV/11kV distribution and solar installations", "Complete electrical systems for new production lines"],
-        image: "/images/project_1_power.png",
+        highlights: ["Continuous maintenance contract since 1985 - 40 years running", "33kV/11kV distribution and solar installations", "Complete electrical systems for new production lines"],
+        image: "/images/nestle_portfolio_pic_1.png",
         icon: <Factory size={24} />
     },
     {
         category: 'industrial',
-        title: "Dutch Lady — Facility Upgrades",
+        title: "Dutch Lady - Facility Upgrades",
         period: "2019 – 2025",
         location: "Petaling Jaya",
         description: "Maintenance and upgrade projects across the Petaling Jaya plant, including HT 11kV systems, UHT plant electrical systems, and packing line installations.",
         highlights: ["HT 11kV system upgrades", "UHT plant electrical systems", "Packing line installations"],
-        image: "/images/project_2_comm.png",
+        image: "/images/dutchlady_portfolio_pic_1.png",
         icon: <Factory size={24} />
     },
-    {
+    /*{
         category: 'industrial',
-        title: "Central Sugars Refinery — Maintenance Contract",
+        title: "Central Sugars Refinery - Maintenance Contract",
         period: "1985 – 2018",
         location: "Malaysia",
         description: "Long-term maintenance contract spanning over three decades for Central Sugars Refinery, ensuring reliable electrical infrastructure for continuous refinery operations.",
         highlights: ["33-year maintenance partnership", "Industrial refinery electrical systems"],
         image: "/images/project_1_power.png",
         icon: <Factory size={24} />
-    },
+    },*/
     {
         category: 'power',
-        title: "Kim Hock Corporation — Biomass Power Plants",
+        title: "Kim Hock Corporation - Biomass Power Plants",
         period: "2011",
         location: "Singapore",
         description: "Design and commissioning of biomass power plants for Kim Hock Corporation Singapore, including a 9.4MW biomass power plant and a 10MW recycling plant.",
         highlights: ["9.4MW biomass power plant", "10MW recycling plant"],
-        image: "/images/project_1_power.png",
+        image: "/images/kimhock_portfolio_pic_1.png",
         icon: <Zap size={24} />
     },
     {
         category: 'power',
-        title: "NBPOL Papua New Guinea — Biogas Power Plants",
+        title: "NBPOL Papua New Guinea - Biogas Power Plants",
         period: "2012",
         location: "Papua New Guinea",
         description: "Biogas CDM power plant installations for New Britain Palm Oil Limited (NBPOL) in Papua New Guinea, supporting clean energy generation from palm oil mill effluent.",
         highlights: ["Mosa CDM biogas plant", "Kumbango CDM biogas plant"],
-        image: "/images/project_2_comm.png",
+        image: "/images/nbpol_portfolio_pic_1.png",
         icon: <Zap size={24} />
     },
     {
@@ -117,22 +117,22 @@ const projects = [
     },
     {
         category: 'power',
-        title: "Solar Plant Installations — Nestlé",
+        title: "Solar Plant Installations - Nestlé",
         period: "2013",
         location: "Bintang, Shah Alam",
         description: "Solar power plant installations for Nestlé manufacturing facilities at Bintang and Shah Alam, contributing to sustainable energy initiatives.",
         highlights: ["Nestlé Bintang solar installation", "Nestlé Shah Alam solar installation"],
-        image: "/images/project_1_power.png",
+        image: "/images/nestle_portfolio_pic_2.png",
         icon: <Zap size={24} />
     },
     {
         category: 'water',
-        title: "Sg Terip Seremban — State Government WTP",
+        title: "Sg Terip Seremban - State Government WTP",
         period: "2012",
         location: "Seremban, Negeri Sembilan",
         description: "Electrical engineering for the Sg Terip Seremban State Government Water Treatment Plant, including 11kV distribution systems and transformer upgrades.",
         highlights: ["11kV distribution system", "Transformer upgrades"],
-        image: "/images/project_2_comm.png",
+        image: "/images/sgterip_portfolio_pic_1.png",
         icon: <Droplets size={24} />
     },
     {
@@ -142,7 +142,7 @@ const projects = [
         location: "KLIA, Sepang",
         description: "Transformer upgrading works for the KLIA Water Treatment Plant, ensuring reliable power supply for water treatment operations at Malaysia's primary international airport.",
         highlights: ["Transformer upgrades", "Critical airport water infrastructure"],
-        image: "/images/project_1_power.png",
+        image: "/images/klia_portfolio_pic_1.png",
         icon: <Droplets size={24} />
     },
     {
@@ -152,10 +152,10 @@ const projects = [
         location: "Shah Alam, Chembong",
         description: "Wastewater Treatment Plant (WWTP) electrical engineering projects for Nestlé manufacturing facilities at Shah Alam and Chembong.",
         highlights: ["Shah Alam WWTP", "Chembong WWTP"],
-        image: "/images/project_3_factory.png",
+        image: "/images/nestle_portfolio_pic_3.png",
         icon: <Droplets size={24} />
     },
-    {
+    /*{
         category: 'education',
         title: "ADTEC Kemuning Shah Alam",
         period: "2002",
@@ -164,8 +164,8 @@ const projects = [
         highlights: ["HT/LT electrical systems", "Training equipment installation"],
         image: "/images/project_3_factory.png",
         icon: <GraduationCap size={24} />
-    },
-    {
+    },*/
+    /*{
         category: 'education',
         title: "Pusat Latihan Teknologi Tinggi",
         period: "2002",
@@ -174,8 +174,8 @@ const projects = [
         highlights: ["Kota Kinabalu facility", "Johor facility"],
         image: "/images/project_2_comm.png",
         icon: <GraduationCap size={24} />
-    },
-    {
+    },*/
+    /*{
         category: 'education',
         title: "IKBN — Multiple Campuses",
         period: "2003",
@@ -184,8 +184,8 @@ const projects = [
         highlights: ["IKBN Bachok", "IKBN Chembong, Kuala Perlis, Kinarut"],
         image: "/images/project_1_power.png",
         icon: <GraduationCap size={24} />
-    },
-    {
+    },*/
+    /*{
         category: 'education',
         title: "ILP Kuantan, BMI Pahang & PPK Sarawak",
         period: "2004",
@@ -194,35 +194,35 @@ const projects = [
         highlights: ["ILP Kuantan", "BMI Pahang", "Pusat Pembangunan Kemahiran Sarawak"],
         image: "/images/project_3_factory.png",
         icon: <GraduationCap size={24} />
-    },
+    },*/
     {
         category: 'infra',
-        title: "2nd Penang Bridge — Transformer Upgrading",
+        title: "2nd Penang Bridge - Transformer Upgrading",
         period: "2025",
         location: "Penang, Malaysia",
         description: "Underground transformer upgrading works for the Jambatan Kedua (Second Penang Bridge), one of Malaysia's most significant infrastructure projects.",
         highlights: ["Underground transformer upgrading", "Critical national infrastructure project"],
-        image: "/images/project_1_power.png",
+        image: "/images/pgbridge2_portfolio_pic_1.png",
         icon: <Building size={24} />
     },
     {
         category: 'infra',
-        title: "KLIA — 20MVA Transformer Upgrading",
+        title: "KLIA - 20MVA Transformer Upgrading",
         period: "2024",
         location: "KLIA, Sepang",
         description: "Major 20MVA transformer upgrading at Kuala Lumpur International Airport, ensuring reliable power distribution for Malaysia's primary international aviation hub.",
         highlights: ["20MVA transformer upgrading", "Critical aviation infrastructure"],
-        image: "/images/project_2_comm.png",
+        image: "/images/klia_portfolio_pic_2.png",
         icon: <Zap size={24} />
     },
     {
         category: 'infra',
-        title: "Aries International Italy — Shipyard/Cruise MSB",
+        title: "Aries International Italy - Shipyard/Cruise MSB",
         period: "2025",
         location: "International",
         description: "Main Switchboard (MSB) upgrading for international shipyard and cruise vessel projects in collaboration with Aries International Italy — expanding into the maritime sector.",
         highlights: ["Shipyard / Cruise MSB upgrading", "International maritime collaboration"],
-        image: "/images/project_3_factory.png",
+        image: "/images/ariesinternational_portfolio_pic_1.png",
         icon: <Ship size={24} />
     },
     {
@@ -232,7 +232,7 @@ const projects = [
         location: "Malaysia",
         description: "Factory electrical system installations for Ngeam Engineering, Array Metal, and Castle Chemical — delivering complete industrial electrical infrastructure.",
         highlights: ["Factory electrical systems", "Multiple industrial clients"],
-        image: "/images/project_2_comm.png",
+        image: "/images/ngeameng_portfolio_pic_1.png",
         icon: <Factory size={24} />
     },
 ];
